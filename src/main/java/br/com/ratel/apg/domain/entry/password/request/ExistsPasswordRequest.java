@@ -1,8 +1,11 @@
-package br.com.ratel.apg.domain.entry.request;
+package br.com.ratel.apg.domain.entry.password.request;
+
+import javax.validation.constraints.NotNull;
 
 import br.com.ratel.apg.domain.type.PasswordType;
 
-public class GetNextPasswordNumberRequest {
+public class ExistsPasswordRequest {
+	@NotNull(message = "PasswordType é obrigatório")
 	private PasswordType passwordType;
 
 	public PasswordType getPasswordType() {

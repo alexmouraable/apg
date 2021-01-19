@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.ratel.apg.domain.data.password.GetGreaterPasswordNumberData;
-import br.com.ratel.apg.domain.entry.ExistsPasswordEntry;
-import br.com.ratel.apg.domain.entry.GetNextPasswordNumberEntry;
-import br.com.ratel.apg.domain.entry.request.ExistsPasswordRequest;
-import br.com.ratel.apg.domain.entry.request.GetNextPasswordNumberRequest;
+import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
+import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
+import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
+import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
 
 @Service
 public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry {
