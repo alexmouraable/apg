@@ -1,4 +1,4 @@
-package br.com.ratel.apg.domain.data;
+package br.com.ratel.apg.domain.data.password;
 
 import java.time.LocalDate;
 

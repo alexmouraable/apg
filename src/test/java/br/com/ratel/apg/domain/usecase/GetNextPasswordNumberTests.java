@@ -14,7 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import br.com.ratel.apg.domain.data.GetGreaterPasswordNumberData;
+import br.com.ratel.apg.domain.data.password.GetGreaterPasswordNumberData;
 import br.com.ratel.apg.domain.entry.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.request.ExistsPasswordRequest;

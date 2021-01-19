@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.ratel.apg.domain.data.GetGreaterPasswordNumberData;
+import br.com.ratel.apg.domain.data.password.GetGreaterPasswordNumberData;
 import br.com.ratel.apg.domain.entry.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.request.ExistsPasswordRequest;
