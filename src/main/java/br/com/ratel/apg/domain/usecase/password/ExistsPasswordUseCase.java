@@ -1,4 +1,4 @@
-package br.com.ratel.apg.domain.usecase;
+package br.com.ratel.apg.domain.usecase.password;
 
 import java.time.LocalDate;
 

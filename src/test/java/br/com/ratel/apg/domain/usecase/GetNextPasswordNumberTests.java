@@ -20,6 +20,7 @@ import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
 import br.com.ratel.apg.domain.type.PasswordType;
+import br.com.ratel.apg.domain.usecase.password.GetNextPasswordNumberUseCase;
 
 @ExtendWith(SpringExtension.class)
 public class GetNextPasswordNumberTests {
