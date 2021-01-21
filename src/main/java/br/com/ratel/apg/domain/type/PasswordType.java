@@ -1,5 +1,10 @@
 package br.com.ratel.apg.domain.type;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum PasswordType {
 	
 	NORMAL("Normal", 1),
@@ -7,18 +12,5 @@ public enum PasswordType {
 	
 	private String description;
 	private Integer initialPasswordNumber;
-	
-	PasswordType(String description, Integer initialPasswordNumber) {
-		this.description = description;
-		this.initialPasswordNumber = initialPasswordNumber;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public Integer getInitialPasswordNumber() {
-		return initialPasswordNumber;
-	}
 	
 }
