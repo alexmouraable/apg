@@ -24,15 +24,12 @@ import br.com.ratel.apg.domain.usecase.password.GetNextPasswordNumberUseCase;
 
 @ExtendWith(SpringExtension.class)
 public class GetNextPasswordNumberTests {
-
 	@TestConfiguration
 	static class GetNextPasswordNumberTestsConfiguration {
-
 		@Bean
 		public GetNextPasswordNumberEntry getNextPasswordNumberEntry() {
 			return new GetNextPasswordNumberUseCase();
 		}
-
 	}
 
 	@MockBean
@@ -111,5 +108,4 @@ public class GetNextPasswordNumberTests {
 		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
 		assertEquals(expectedPasswordNumber, passwordNumber);
 	}
-	
 }

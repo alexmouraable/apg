@@ -11,7 +11,6 @@ import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 
 @Service
 public class ExistsPasswordUseCase implements ExistsPasswordEntry {
-
 	@Autowired
 	private ExistsPasswordData existsPasswordData;
 	
@@ -20,5 +19,4 @@ public class ExistsPasswordUseCase implements ExistsPasswordEntry {
 		// TODO: Validar ExistsPasswordRequest
 		return this.existsPasswordData.execute(request.getPasswordType(), LocalDate.now());
 	}
-
 }

@@ -9,8 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ExistsPasswordRequest {
-	
 	@NotNull(message = "PasswordType é obrigatório")
 	private PasswordType passwordType;
-	
 }
