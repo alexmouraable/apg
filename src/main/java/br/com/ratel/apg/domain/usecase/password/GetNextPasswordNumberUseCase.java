@@ -10,11 +10,12 @@ import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
+import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
 public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry {
-	// @Autowired
-	// private Validator validator';
+	@Autowired
+	private Validator<GetNextPasswordNumberRequest> validator;
 
 	@Autowired
 	private ExistsPasswordEntry existsPasswordEntry;
@@ -24,7 +25,7 @@ public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry 
 
 	@Override
 	public Integer execute(GetNextPasswordNumberRequest getNextPasswordNumberRequest) {
-		// this.validator.validate(getNextPasswordNumberRequest);
+		this.validator.validate(getNextPasswordNumberRequest);
 
 		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest();
 		existsPasswordRequest.setPasswordType(getNextPasswordNumberRequest.getPasswordType());

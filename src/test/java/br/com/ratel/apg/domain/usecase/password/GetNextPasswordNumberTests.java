@@ -20,7 +20,7 @@ import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
 import br.com.ratel.apg.domain.type.PasswordType;
-import br.com.ratel.apg.domain.usecase.password.GetNextPasswordNumberUseCase;
+import br.com.ratel.apg.domain.validator.Validator;
 
 @ExtendWith(SpringExtension.class)
 public class GetNextPasswordNumberTests {
@@ -32,6 +32,9 @@ public class GetNextPasswordNumberTests {
 		}
 	}
 
+	@MockBean
+	private Validator<GetNextPasswordNumberRequest> validator;
+	
 	@MockBean
 	private ExistsPasswordEntry existsPasswordEntry;
 
@@ -73,11 +76,6 @@ public class GetNextPasswordNumberTests {
 
 	@Test
 	public void return2IfNormalPasswordGeneratedToday() {
-		/*
-		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest();
-		existsPasswordRequest.setPasswordType(PasswordType.NORMAL);
-		*/
-
 		when(this.existsPasswordEntry.execute(ArgumentMatchers.any(ExistsPasswordRequest.class))).thenReturn(true);
 		
 		when(this.getGreaterPasswordNumberData.execute(PasswordType.NORMAL, LocalDate.now())).thenReturn(1);
@@ -92,11 +90,6 @@ public class GetNextPasswordNumberTests {
 	
 	@Test
 	public void return501IfNormalPasswordGeneratedToday() {
-		/*
-		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest();
-		existsPasswordRequest.setPasswordType(PasswordType.PREFERENCIAL);
-		*/
-		
 		when(this.existsPasswordEntry.execute(ArgumentMatchers.any(ExistsPasswordRequest.class))).thenReturn(true);
 		
 		when(this.getGreaterPasswordNumberData.execute(PasswordType.PREFERENCIAL, LocalDate.now())).thenReturn(500);
