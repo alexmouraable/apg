@@ -8,15 +8,19 @@ import org.springframework.stereotype.Service;
 import br.com.ratel.apg.domain.data.password.ExistsPasswordData;
 import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
+import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
 public class ExistsPasswordUseCase implements ExistsPasswordEntry {
 	@Autowired
 	private ExistsPasswordData existsPasswordData;
 	
+	@Autowired
+	private Validator<ExistsPasswordRequest> validator;
+	
 	@Override
 	public boolean execute(ExistsPasswordRequest request) {
-		// TODO: Validar ExistsPasswordRequest
+		this.validator.validate(request);
 		return this.existsPasswordData.execute(request.getPasswordType(), LocalDate.now());
 	}
 }
