@@ -11,7 +11,6 @@ import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.GeneratePasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
 import br.com.ratel.apg.domain.entry.password.response.GeneratePasswordResponse;
-import br.com.ratel.apg.domain.mapper.Mapper;
 import br.com.ratel.apg.domain.model.Password;
 import br.com.ratel.apg.domain.validator.Validator;
 
@@ -22,27 +21,25 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 
 	@Autowired
 	private GetNextPasswordNumberEntry getNextPasswordNumberEntry;
-	
+
 	@Autowired
 	private GeneratePasswordData generatePasswordData;
-	
-	@Autowired
-	private Mapper<Password, GeneratePasswordResponse> mapper;
 
 	@Override
 	public GeneratePasswordResponse execute(GeneratePasswordRequest generatePasswordRequest) {
 		this.validator.validate(generatePasswordRequest);
-		
+
 		GetNextPasswordNumberRequest getNextPasswordNumberRequest = new GetNextPasswordNumberRequest(
 				generatePasswordRequest.getPasswordType());
-		
+
 		Integer nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
-		
+
 		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getPasswordType(),
 				LocalDateTime.now());
-		
+
 		Password generatedPassword = this.generatePasswordData.execute(passwordToGenerate);
-		
-		return this.mapper.map(generatedPassword);
+
+		return new GeneratePasswordResponse(generatedPassword.getId(), generatedPassword.getNumber(),
+				generatedPassword.getPasswordType(), generatedPassword.getGenerationDateAndTime());
 	}
 }
