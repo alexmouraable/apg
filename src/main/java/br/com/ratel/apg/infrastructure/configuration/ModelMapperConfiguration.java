@@ -1,4 +1,4 @@
-package br.com.ratel.apg.configuration;
+package br.com.ratel.apg.infrastructure.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
