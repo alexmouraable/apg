@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("password")
 public class PasswordController {
-
-	@RequestMapping("/password-print")
-	public String goToPasswordPrintPage() {
+	@RequestMapping("/print-password")
+	public String goToPrintPasswordPage() {
 		return "password/print-password";
-	}
-	
+	}	
 }

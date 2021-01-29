@@ -2,7 +2,7 @@ package br.com.ratel.apg.domain.model;
 
 import java.time.LocalDateTime;
 
-import br.com.ratel.apg.domain.type.PasswordType;
+import br.com.ratel.apg.domain.constant.PasswordType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

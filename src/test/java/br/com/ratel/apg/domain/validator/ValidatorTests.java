@@ -19,8 +19,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import br.com.ratel.apg.domain.constant.PasswordType;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
-import br.com.ratel.apg.domain.type.PasswordType;
 
 @ExtendWith(SpringExtension.class)
 public class ValidatorTests {

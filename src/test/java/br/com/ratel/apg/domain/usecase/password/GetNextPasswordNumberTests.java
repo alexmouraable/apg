@@ -14,12 +14,12 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import br.com.ratel.apg.domain.constant.PasswordType;
 import br.com.ratel.apg.domain.data.password.GetGreaterPasswordNumberData;
 import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
-import br.com.ratel.apg.domain.type.PasswordType;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @ExtendWith(SpringExtension.class)
