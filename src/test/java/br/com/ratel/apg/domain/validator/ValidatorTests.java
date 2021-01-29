@@ -21,6 +21,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import br.com.ratel.apg.domain.constant.PasswordType;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
+import br.com.ratel.apg.infrastructure.validator.ObjectValidator;
 
 @ExtendWith(SpringExtension.class)
 public class ValidatorTests {
