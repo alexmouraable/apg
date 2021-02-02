@@ -1,6 +1,7 @@
 package br.com.ratel.apg.infrastructure.jpa.data.password;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import br.com.ratel.apg.domain.data.password.GeneratePasswordData;
 import br.com.ratel.apg.domain.mapper.Mapper;
@@ -8,6 +9,7 @@ import br.com.ratel.apg.domain.model.Password;
 import br.com.ratel.apg.infrastructure.jpa.entity.PasswordEntity;
 import br.com.ratel.apg.infrastructure.jpa.repository.PasswordRepository;
 
+@Component
 public class GeneratePasswordDataJpa implements GeneratePasswordData {
 	@Autowired
 	private PasswordRepository passwordRepository;
