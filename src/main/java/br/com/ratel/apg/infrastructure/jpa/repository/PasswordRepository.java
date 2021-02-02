@@ -12,9 +12,9 @@ import br.com.ratel.apg.infrastructure.jpa.entity.PasswordEntity;
 
 @Repository
 public interface PasswordRepository extends JpaRepository<PasswordEntity, Long> {
-	public boolean existsByPasswordTypeAndGenerationDate(PasswordType passwordType, LocalDate date);
+	public boolean existsByPasswordTypeAndGenerationDate(PasswordType passwordType, LocalDate generationDate);
 
-	@Query("SELECT MAX(p.number) FROM PasswordEntity p WHERE p.passwordType = :passwordType AND p.generationDate = :date")
+	@Query("SELECT MAX(p.number) FROM PasswordEntity p WHERE p.passwordType = :passwordType AND p.generationDate = :generationDate")
 	public Integer findMaxPasswordNumberByPasswordTypeAndGenerationDate(
-			@Param("passwordType") PasswordType passwordType, @Param("date") LocalDate date);
+			@Param("passwordType") PasswordType passwordType, @Param("generationDate") LocalDate generationDate);
 }

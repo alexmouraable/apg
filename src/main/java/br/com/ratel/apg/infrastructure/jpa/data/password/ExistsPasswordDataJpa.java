@@ -15,7 +15,7 @@ public class ExistsPasswordDataJpa implements ExistsPasswordData {
 	private PasswordRepository passwordRepository;
 
 	@Override
-	public boolean execute(PasswordType passwordType, LocalDate date) {
-		return this.passwordRepository.existsByPasswordTypeAndGenerationDate(passwordType, date);
+	public boolean execute(PasswordType passwordType, LocalDate generationDate) {
+		return this.passwordRepository.existsByPasswordTypeAndGenerationDate(passwordType, generationDate);
 	}
 }

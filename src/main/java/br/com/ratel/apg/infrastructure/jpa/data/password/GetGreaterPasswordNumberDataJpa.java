@@ -13,9 +13,9 @@ import br.com.ratel.apg.infrastructure.jpa.repository.PasswordRepository;
 public class GetGreaterPasswordNumberDataJpa implements GetGreaterPasswordNumberData {
 	@Autowired
 	private PasswordRepository passwordRepository;
-	
+
 	@Override
-	public Integer execute(PasswordType passwordType, LocalDate date) {
-		return this.passwordRepository.findMaxPasswordNumberByPasswordTypeAndGenerationDate(passwordType, date);
+	public Integer execute(PasswordType passwordType, LocalDate generationDate) {
+		return this.passwordRepository.findMaxPasswordNumberByPasswordTypeAndGenerationDate(passwordType, generationDate);
 	}
 }

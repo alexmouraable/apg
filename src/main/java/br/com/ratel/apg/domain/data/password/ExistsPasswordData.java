@@ -5,5 +5,5 @@ import java.time.LocalDate;
 import br.com.ratel.apg.domain.constant.PasswordType;
 
 public interface ExistsPasswordData {
-	public boolean execute(PasswordType passwordType, LocalDate date);
+	public boolean execute(PasswordType passwordType, LocalDate generationDate);
 }

@@ -14,5 +14,5 @@ public class GeneratePasswordResponse {
 	private Long id;
 	private Integer number;
 	private PasswordType passwordType;
-	private LocalDateTime generationDateAndTime;
+	private LocalDateTime generationDate;
 }
