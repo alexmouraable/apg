@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.ratel.apg.domain.data.password.GeneratePasswordData;
 import br.com.ratel.apg.domain.entry.password.GeneratePasswordEntry;
@@ -29,6 +30,7 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 	@Autowired
 	private Mapper<Password, GeneratePasswordResponse> mapper;
 
+	@Transactional
 	@Override
 	public GeneratePasswordResponse execute(GeneratePasswordRequest generatePasswordRequest) {
 		this.validator.validate(generatePasswordRequest);
