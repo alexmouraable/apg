@@ -1,6 +1,6 @@
 package br.com.ratel.apg.domain.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import br.com.ratel.apg.domain.constant.PasswordType;
 import lombok.AllArgsConstructor;
@@ -16,5 +16,5 @@ public class Password {
 	private Long id;
 	private Integer number;
 	private PasswordType passwordType;
-	private LocalDateTime generationDateAndTime;
+	private LocalDate generationDate;
 }

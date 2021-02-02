@@ -1,6 +1,6 @@
 package br.com.ratel.apg.domain.usecase.password;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,7 +39,7 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 		Integer nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
 
 		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getPasswordType(),
-				LocalDateTime.now());
+				LocalDate.now());
 
 		Password generatedPassword = this.generatePasswordData.execute(passwordToGenerate);
 
