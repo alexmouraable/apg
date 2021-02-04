@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        hikari:
+            connection-test-query: SELECT 1
+    jpa:
+        hibernate:
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.SQLServerDialect
+        show-sql: true
