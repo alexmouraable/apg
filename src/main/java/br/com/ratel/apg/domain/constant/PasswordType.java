@@ -6,7 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum PasswordType {
-	NORMAL("Normal", 1),
+	CONVENCIONAL("Convencional", 1),
 	PREFERENCIAL("Preferencial", 500);
 	
 	private String description;

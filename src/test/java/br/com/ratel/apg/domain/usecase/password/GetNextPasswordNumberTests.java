@@ -47,12 +47,12 @@ public class GetNextPasswordNumberTests {
 	@Test
 	public void return1IfNoNormalPasswordGeneratedForToday() {
 		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest();
-		existsPasswordRequest.setPasswordType(PasswordType.NORMAL);
+		existsPasswordRequest.setPasswordType(PasswordType.CONVENCIONAL);
 		
 		when(this.existsPasswordEntry.execute(existsPasswordRequest)).thenReturn(false);
 
 		GetNextPasswordNumberRequest request = new GetNextPasswordNumberRequest();
-		request.setPasswordType(PasswordType.NORMAL);
+		request.setPasswordType(PasswordType.CONVENCIONAL);
 		
 		Integer expectedPasswordNumber = 1;
 		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
@@ -78,10 +78,10 @@ public class GetNextPasswordNumberTests {
 	public void return2IfNormalPasswordGeneratedToday() {
 		when(this.existsPasswordEntry.execute(ArgumentMatchers.any(ExistsPasswordRequest.class))).thenReturn(true);
 		
-		when(this.getGreaterPasswordNumberData.execute(PasswordType.NORMAL, LocalDate.now())).thenReturn(1);
+		when(this.getGreaterPasswordNumberData.execute(PasswordType.CONVENCIONAL, LocalDate.now())).thenReturn(1);
 
 		GetNextPasswordNumberRequest request = new GetNextPasswordNumberRequest();
-		request.setPasswordType(PasswordType.NORMAL);
+		request.setPasswordType(PasswordType.CONVENCIONAL);
 		
 		Integer expectedPasswordNumber = 2;
 		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
