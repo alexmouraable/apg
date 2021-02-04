@@ -12,11 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import br.com.ratel.apg.domain.constant.PasswordType;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "ChamadaSenha")
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class PasswordEntity {
