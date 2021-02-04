@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import br.com.ratel.apg.domain.constant.PasswordStatus;
 import br.com.ratel.apg.domain.constant.PasswordType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,6 +36,10 @@ public class PasswordEntity {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "Tipo_Senha")
 	private PasswordType passwordType;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "Sit_Senha")
+	private PasswordStatus passwordStatus;
 	
 	@Column(name = "Data_Senha")
 	private LocalDate generationDate;

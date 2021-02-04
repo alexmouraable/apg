@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import br.com.ratel.apg.domain.constant.PasswordStatus;
 import br.com.ratel.apg.domain.data.password.GeneratePasswordData;
 import br.com.ratel.apg.domain.entry.password.GeneratePasswordEntry;
 import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
@@ -26,7 +27,7 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 
 	@Autowired
 	private GeneratePasswordData generatePasswordData;
-	
+
 	@Autowired
 	private Mapper<Password, GeneratePasswordResponse> mapper;
 
@@ -41,7 +42,7 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 		Integer nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
 
 		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getPasswordType(),
-				LocalDate.now());
+				PasswordStatus.AGUARDANDO, LocalDate.now());
 
 		Password generatedPassword = this.generatePasswordData.execute(passwordToGenerate);
 
