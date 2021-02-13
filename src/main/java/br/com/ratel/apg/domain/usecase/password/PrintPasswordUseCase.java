@@ -31,11 +31,12 @@ public class PrintPasswordUseCase implements PrintPasswordEntry {
 		
 		GeneratePasswordResponse generatePasswordResponse = this.generatePasswordEntry
 				.execute(new GeneratePasswordRequest(request.getPasswordType()));
-		Report reportPassword = new Report("Password");
 		
-		reportPassword.addParameter("PASSWORD_NUMBER", generatePasswordResponse.getNumber());
-		reportPassword.addParameter("PASSWORD_TYPE", generatePasswordResponse.getPasswordType().toString());
-		reportPassword.addParameter("GENERATION_DATE", generatePasswordResponse.getGenerationDate().toString());
+		Report reportPassword = new Report("Password");
+		reportPassword.addParameter("CompanyName", "Clismetra");
+		reportPassword.addParameter("PasswordNumber", generatePasswordResponse.getNumber());
+		reportPassword.addParameter("PasswordType", generatePasswordResponse.getPasswordType().toString());
+		reportPassword.addParameter("GenerationDate", generatePasswordResponse.getGenerationDate().toString());
 		
 		this.printer.printOut(reportPassword);
 	}
