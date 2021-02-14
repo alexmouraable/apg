@@ -20,6 +20,9 @@
 
 		<!-- ModelMapper -->
 		<modelmapper.version>2.3.0</modelmapper.version>
+		
+		<!-- Jasper Reports -->
+		<jasperreports.version>6.16.0</jasperreports.version>
 	</properties>
 
 	<dependencies>
@@ -71,6 +74,13 @@
 		<dependency>
 			<groupId>net.sourceforge.jtds</groupId>
 			<artifactId>jtds</artifactId>
+		</dependency>
+
+		<!-- Jasper Reports -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>${jasperreports.version}</version>
 		</dependency>
 	</dependencies>
 
