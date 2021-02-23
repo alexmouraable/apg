@@ -35,8 +35,18 @@
   </a>
 </h2>
 
-
-
+- Linguagens de Programação
+  - Java 
+- Frameworks
+  - Spring Boot
+  - Spring Data JPA
+  - JUnit 5
+  - Mockito
+- Libs
+  - Lombok
+  - ModelMapper 
+  - JasperReports
+  
 <h2>
   <a name="installation">
     &#128640; Instalação
