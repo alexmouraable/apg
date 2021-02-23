@@ -1,6 +1,10 @@
 package br.com.ratel.apg.domain.usecase.password;
 
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +19,9 @@ import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
 public class PrintPasswordUseCase implements PrintPasswordEntry {
+	@Value("${apg.company.name}")
+	private String companyName;
+
 	@Autowired
 	private Validator<PrintPasswordRequest> validator;
 
@@ -28,16 +35,23 @@ public class PrintPasswordUseCase implements PrintPasswordEntry {
 	@Override
 	public void execute(PrintPasswordRequest request) {
 		this.validator.validate(request);
-		
+
 		GeneratePasswordResponse generatePasswordResponse = this.generatePasswordEntry
 				.execute(new GeneratePasswordRequest(request.getPasswordType()));
+
+		String formattedPasswordNumber = String.format("%03d", generatePasswordResponse.getNumber());
+		
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy", new Locale("pt", "BR"));
+		
+		String formattedGenerationDate = generatePasswordResponse.getGenerationDate().format(dateTimeFormatter);
 		
 		Report reportPassword = new Report("Password");
-		reportPassword.addParameter("CompanyName", "Clismetra");
-		reportPassword.addParameter("PasswordNumber", generatePasswordResponse.getNumber());
-		reportPassword.addParameter("PasswordType", generatePasswordResponse.getPasswordType().toString());
-		reportPassword.addParameter("GenerationDate", generatePasswordResponse.getGenerationDate().toString());
-		
+		reportPassword.addParameter("CompanyName", this.companyName);
+		reportPassword.addParameter("PasswordTypeAcronym", generatePasswordResponse.getPasswordType().getAcronym());
+		reportPassword.addParameter("PasswordNumber", formattedPasswordNumber);
+		reportPassword.addParameter("PasswordType", generatePasswordResponse.getPasswordType().getDescription());
+		reportPassword.addParameter("GenerationDate", formattedGenerationDate);
+
 		this.printer.printOut(reportPassword);
 	}
 }

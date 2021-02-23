@@ -20,9 +20,12 @@
 
 		<!-- ModelMapper -->
 		<modelmapper.version>2.3.0</modelmapper.version>
-		
+
 		<!-- Jasper Reports -->
 		<jasperreports.version>6.16.0</jasperreports.version>
+
+		<!-- Jasper Reports Functions -->
+		<jasperreports-functions.version>6.16.0</jasperreports-functions.version>
 	</properties>
 
 	<dependencies>
@@ -81,6 +84,13 @@
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
 			<version>${jasperreports.version}</version>
+		</dependency>
+
+		<!-- Jasper Reports Functions -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-functions</artifactId>
+			<version>${jasperreports-functions.version}</version>
 		</dependency>
 	</dependencies>
 

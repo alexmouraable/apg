@@ -1,6 +1,6 @@
 package br.com.ratel.apg.domain.entry.password.response;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import br.com.ratel.apg.domain.constant.PasswordStatus;
 import br.com.ratel.apg.domain.constant.PasswordType;
@@ -18,5 +18,5 @@ public class GeneratePasswordResponse {
 	private Integer number;
 	private PasswordType passwordType;
 	private PasswordStatus passwordStatus;
-	private LocalDateTime generationDate;
+	private LocalDate generationDate;
 }

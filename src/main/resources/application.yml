@@ -12,3 +12,10 @@ spring:
             hibernate:
                 dialect: org.hibernate.dialect.SQLServerDialect
         show-sql: true
+# Custom Settings
+apg:
+  printers:
+    password-printer:
+      name: EPSON L3110 Series
+  company:
+    name: Clismetra
