@@ -1,6 +1,7 @@
 package br.com.ratel.apg.domain.usecase.password;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,8 +33,8 @@ public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry 
 				getNextPasswordNumberRequest.getPasswordType());
 
 		if (this.existsPasswordEntry.execute(existsPasswordRequest)) {
-			Integer nextPasswordNumber = this.getGreaterPasswordNumberData
-					.execute(getNextPasswordNumberRequest.getPasswordType(), LocalDate.now()) + 1;
+			Integer nextPasswordNumber = this.getGreaterPasswordNumberData.execute(
+					getNextPasswordNumberRequest.getPasswordType(), LocalDate.now(ZoneId.of("America/Maceio"))) + 1;
 
 			return new PasswordNumber(nextPasswordNumber);
 		}

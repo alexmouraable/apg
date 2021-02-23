@@ -39,16 +39,13 @@ public class PrintPasswordUseCase implements PrintPasswordEntry {
 		GeneratePasswordResponse generatePasswordResponse = this.generatePasswordEntry
 				.execute(new GeneratePasswordRequest(request.getPasswordType()));
 
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy", new Locale("pt", "BR"));
-
-		String formattedGenerationDate = generatePasswordResponse.getGenerationDate().format(dateTimeFormatter);
-		
 		Report reportPassword = new Report("Password");
 		reportPassword.addParameter("CompanyName", this.companyName);
 		reportPassword.addParameter("PasswordTypeAcronym", generatePasswordResponse.getPasswordType().getAcronym());
 		reportPassword.addParameter("PasswordNumber", generatePasswordResponse.getPasswordNumber().toString());
 		reportPassword.addParameter("PasswordType", generatePasswordResponse.getPasswordType().getDescription());
-		reportPassword.addParameter("GenerationDate", formattedGenerationDate);
+		reportPassword.addParameter("GenerationDate", generatePasswordResponse.getGenerationDate()
+				.format(DateTimeFormatter.ofPattern("dd/MM/yyyy", new Locale("pt", "BR"))));
 
 		this.printer.printOut(reportPassword);
 	}

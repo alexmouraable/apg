@@ -1,6 +1,7 @@
 package br.com.ratel.apg.domain.usecase.password;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,6 @@ public class ExistsPasswordUseCase implements ExistsPasswordEntry {
 	@Override
 	public boolean execute(ExistsPasswordRequest request) {
 		this.validator.validate(request);
-		return this.existsPasswordData.execute(request.getPasswordType(), LocalDate.now());
+		return this.existsPasswordData.execute(request.getPasswordType(), LocalDate.now(ZoneId.of("America/Maceio")));
 	}
 }
