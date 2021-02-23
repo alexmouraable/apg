@@ -19,6 +19,11 @@
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38754458/108899330-108d4e00-75f7-11eb-9bdd-5c3ab716d9f7.png" />
+  <p>
+    <b>
+      Figura 1. Página Principal - Imprimir Senha
+    </b>
+  </p>
 </div>
 
 <h2>
@@ -32,9 +37,9 @@ APG é uma Aplicação Web responsável por <b>Gerar Senha de Atendimento</b>. D
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38754458/108910581-d4f98080-7604-11eb-865e-9dc329e7c4cc.jpg" />
   <p>
-      <b>
-        Figura 1. Integração APG e SysLabMed
-      </b>
+    <b>
+      Figura 2. Integração Entre APG e SysLabMed
+    </b>
   </p>
 </div>
 
