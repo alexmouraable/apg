@@ -20,6 +20,7 @@ import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
+import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @ExtendWith(SpringExtension.class)
@@ -55,8 +56,8 @@ public class GetNextPasswordNumberTests {
 		request.setPasswordType(PasswordType.CONVENCIONAL);
 		
 		Integer expectedPasswordNumber = 1;
-		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
-		assertEquals(expectedPasswordNumber, passwordNumber);
+		PasswordNumber passwordNumber = this.getNextPasswordNumberEntry.execute(request);
+		assertEquals(expectedPasswordNumber, passwordNumber.getNumber());
 	}
 
 	@Test
@@ -70,8 +71,8 @@ public class GetNextPasswordNumberTests {
 		request.setPasswordType(PasswordType.PREFERENCIAL);
 		
 		Integer expectedPasswordNumber = 500;
-		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
-		assertEquals(expectedPasswordNumber, passwordNumber);
+		PasswordNumber passwordNumber = this.getNextPasswordNumberEntry.execute(request);
+		assertEquals(expectedPasswordNumber, passwordNumber.getNumber());
 	}
 
 	@Test
@@ -84,8 +85,8 @@ public class GetNextPasswordNumberTests {
 		request.setPasswordType(PasswordType.CONVENCIONAL);
 		
 		Integer expectedPasswordNumber = 2;
-		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
-		assertEquals(expectedPasswordNumber, passwordNumber);
+		PasswordNumber passwordNumber = this.getNextPasswordNumberEntry.execute(request);
+		assertEquals(expectedPasswordNumber, passwordNumber.getNumber());
 	}
 	
 	@Test
@@ -98,7 +99,7 @@ public class GetNextPasswordNumberTests {
 		request.setPasswordType(PasswordType.PREFERENCIAL);
 		
 		Integer expectedPasswordNumber = 501;
-		Integer passwordNumber = this.getNextPasswordNumberEntry.execute(request);
-		assertEquals(expectedPasswordNumber, passwordNumber);
+		PasswordNumber passwordNumber = this.getNextPasswordNumberEntry.execute(request);
+		assertEquals(expectedPasswordNumber, passwordNumber.getNumber());
 	}
 }

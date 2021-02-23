@@ -4,18 +4,15 @@ import java.time.LocalDate;
 
 import br.com.ratel.apg.domain.constant.PasswordStatus;
 import br.com.ratel.apg.domain.constant.PasswordType;
-import lombok.AllArgsConstructor;
+import br.com.ratel.apg.domain.type.PasswordNumber;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 public class GeneratePasswordResponse {
 	private Long id;
-	private Integer number;
+	private PasswordNumber passwordNumber;
 	private PasswordType passwordType;
 	private PasswordStatus passwordStatus;
 	private LocalDate generationDate;

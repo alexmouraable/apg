@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import br.com.ratel.apg.domain.data.password.GeneratePasswordData;
 import br.com.ratel.apg.domain.mapper.Mapper;
 import br.com.ratel.apg.domain.model.Password;
+import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.infrastructure.jpa.entity.PasswordEntity;
 import br.com.ratel.apg.infrastructure.jpa.repository.PasswordRepository;
 
@@ -22,9 +23,14 @@ public class GeneratePasswordDataJpa implements GeneratePasswordData {
 
 	@Override
 	public Password execute(Password password) {
-		PasswordEntity generatedPassword = this.passwordRepository
-				.save(this.entityFor.map(password, PasswordEntity.class));
-
-		return this.modelFor.map(generatedPassword, Password.class);
+		PasswordEntity passwordToGenerate = this.entityFor.map(password, PasswordEntity.class);
+		passwordToGenerate.setNumber(password.getPasswordNumber().getNumber());
+		
+		PasswordEntity generatedPassword = this.passwordRepository.save(passwordToGenerate);
+		
+		Password mappedGeneratedPassword = this.modelFor.map(generatedPassword, Password.class);
+		mappedGeneratedPassword.setPasswordNumber(new PasswordNumber(generatedPassword.getNumber()));
+		
+		return mappedGeneratedPassword;
 	}
 }

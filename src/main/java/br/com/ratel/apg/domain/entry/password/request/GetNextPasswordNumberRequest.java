@@ -8,10 +8,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class GetNextPasswordNumberRequest {
 	@NotNull(message = "Tipo de senha é obrigatório")
 	private PasswordType passwordType;

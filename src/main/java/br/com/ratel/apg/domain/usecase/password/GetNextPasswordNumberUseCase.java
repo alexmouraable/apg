@@ -10,6 +10,7 @@ import br.com.ratel.apg.domain.entry.password.ExistsPasswordEntry;
 import br.com.ratel.apg.domain.entry.password.GetNextPasswordNumberEntry;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberRequest;
+import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
@@ -24,16 +25,17 @@ public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry 
 	private GetGreaterPasswordNumberData getGreaterPasswordNumberData;
 
 	@Override
-	public Integer execute(GetNextPasswordNumberRequest getNextPasswordNumberRequest) {
+	public PasswordNumber execute(GetNextPasswordNumberRequest getNextPasswordNumberRequest) {
 		this.validator.validate(getNextPasswordNumberRequest);
 
-		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest();
-		existsPasswordRequest.setPasswordType(getNextPasswordNumberRequest.getPasswordType());
+		ExistsPasswordRequest existsPasswordRequest = new ExistsPasswordRequest(
+				getNextPasswordNumberRequest.getPasswordType());
 
 		if (this.existsPasswordEntry.execute(existsPasswordRequest)) {
 			Integer nextPasswordNumber = this.getGreaterPasswordNumberData
 					.execute(getNextPasswordNumberRequest.getPasswordType(), LocalDate.now()) + 1;
-			return nextPasswordNumber;
+
+			return new PasswordNumber(nextPasswordNumber);
 		}
 
 		return getNextPasswordNumberRequest.getPasswordType().getInitialPasswordNumber();

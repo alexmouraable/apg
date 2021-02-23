@@ -15,6 +15,7 @@ import br.com.ratel.apg.domain.entry.password.request.GetNextPasswordNumberReque
 import br.com.ratel.apg.domain.entry.password.response.GeneratePasswordResponse;
 import br.com.ratel.apg.domain.mapper.Mapper;
 import br.com.ratel.apg.domain.model.Password;
+import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
@@ -39,7 +40,7 @@ public class GeneratePasswordUseCase implements GeneratePasswordEntry {
 		GetNextPasswordNumberRequest getNextPasswordNumberRequest = new GetNextPasswordNumberRequest(
 				generatePasswordRequest.getPasswordType());
 
-		Integer nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
+		PasswordNumber nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
 
 		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getPasswordType(),
 				PasswordStatus.AGUARDANDO, LocalDate.now());
