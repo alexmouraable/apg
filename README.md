@@ -21,7 +21,7 @@
   <img src="https://user-images.githubusercontent.com/38754458/108899330-108d4e00-75f7-11eb-9bdd-5c3ab716d9f7.png" />
   <p>
     <b>
-      Figura 1. Página Principal - Imprimir Senha
+      Figura 1. Página de Gerar Senha
     </b>
   </p>
 </div>
