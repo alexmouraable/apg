@@ -32,7 +32,7 @@
   </a>
 </h2>
 
-APG é uma Aplicação Web responsável por <b>Gerar Senha de Atendimento</b>. Detém integração com o <b>SysLabMed (Aplicação Desktop de Gestão Clínica)</b>. Tal integração é via <b>BD (SQLServer 2000)<b/>:
+APG é uma Aplicação Web responsável por <b>Gerar Senha de Atendimento</b>. Detém integração com o <b>SysLabMed (Aplicação Desktop de Gestão Clínica)</b>. Tal integração é via <b>BD (SQLServer 2000)</b>:
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38754458/108910581-d4f98080-7604-11eb-865e-9dc329e7c4cc.jpg" />
