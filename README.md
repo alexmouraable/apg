@@ -61,3 +61,4 @@
   </a>
 </h2>
 
+O APG (Attendance Password Generator) está sob a [Licença MIT](LICENSE).
