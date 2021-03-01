@@ -19,11 +19,6 @@
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38754458/108899330-108d4e00-75f7-11eb-9bdd-5c3ab716d9f7.png" />
-  <p>
-    <b>
-      Figura 1. Página de Gerar Senha
-    </b>
-  </p>
 </div>
 
 <h2>
@@ -32,18 +27,7 @@
   </a>
 </h2>
 
-APG é uma Aplicação Web responsável por <b>Gerar Senha de Atendimento</b>. Detém integração com o <b>SysLabMed (Aplicação Desktop de Gestão Clínica)</b>. Tal integração é via <b>DB (SQLServer 2000)</b>:
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/38754458/108910581-d4f98080-7604-11eb-865e-9dc329e7c4cc.jpg" />
-  <p>
-    <b>
-      Figura 2. Integração Entre APG e SysLabMed
-    </b>
-  </p>
-</div>
-
-O DB detém uma tabela que é responsável por armazenar senhas. Assim, APG gera a senha e salva no DB. Em seguida, SysLabMed poderá chamar e exibir no painel de atendimento a senha gerada.
+O APG é um software Web que detém o propósito de organizar o <b>Atendimento</b> em estabelecimentos. À vista disso, o APG é responsável por <b>Gerar Senha de Atendimento</b> que contém: <b>Nome do Estabelecimento</b>, <b>Número da Senha</b>, <b>Tipo da Senha</b> e <b>Data de Geração da Senha</b>. Um ponto de atenção é que o APG não detém <b>Painel de Senha de Atendimento</b> e <b>Chamador de Senha de Atendimento</b>, por consequência, é necessário haver tais componentes para tornar o <b>Atendimento</b> 100% sistematizado. Então, como integrar o APG com o software que inclui os componentes citados anteriormente? Atualmente, tal integração é efetuada via <b>Banco de Dados</b>, para saber mais, vá para o tópico de <a href="#installation">Instalação</a>.
 
 <h2>
   <a name="technologies">
@@ -51,7 +35,7 @@ O DB detém uma tabela que é responsável por armazenar senhas. Assim, APG gera
   </a>
 </h2>
 
-- Linguagens de Programação
+- Programming Languages
   - Java 
 - Frameworks
   - Spring Boot
@@ -62,6 +46,8 @@ O DB detém uma tabela que é responsável por armazenar senhas. Assim, APG gera
   - Lombok
   - ModelMapper 
   - JasperReports
+- Template Engines
+  - Thymeleaf 
   
 <h2>
   <a name="installation">
