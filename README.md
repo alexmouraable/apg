@@ -67,34 +67,25 @@ O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integ
   Execução
 </h3>
 
-<p align="justify">
-Antes de iniciar a seção de Execução é significante checar a instalação do <a href="https://openjdk.java.net/projects/jdk8">Java 8</a> e <a href="https://git-scm.com/">Git</a>. Para facilitar a compreensão, foi construído o diagrama abaixo:
-</p>
-
-<br />
-
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/38754458/109642642-00fb9100-7b32-11eb-8b4b-15b9de790066.png" />
+  <img src="https://user-images.githubusercontent.com/38754458/109662870-488e1700-7b4a-11eb-9a9d-910d9601d4f6.png" />
 </div>
-
-<br />
-
-◽ **Clonar**: abrir o Prompt de Comando e executar `git clone https://github.com/alexmouraable/apg.git`.
-
-◽ **Importar**: abrir IDE e importar o APG (Project Maven).
-
-◽ **Configurar**: configurar Conexão com Banco de Dados, Nome da Impressora responsável por imprimir a Senha de Atendimento e Nome do Estabelecimento que aparecerá na Senha de Atendimento.
-
-◽ **Executar**: executar o APG e acessá-lo em `http://localhost:8080/password/print-password`
 
 <h3>
   Banco de Dados
 </h3>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/38754458/109662775-30b69300-7b4a-11eb-9409-a80c3bb16ffe.png" />
+</div>
+
 <h3>
   Integração
 </h3>
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/38754458/109662635-082e9900-7b4a-11eb-8571-cad022acbdba.png" />
+</div>
 
 <h2>
   <a name="license">
