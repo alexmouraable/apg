@@ -63,10 +63,12 @@ O APG é um software Web que detém o propósito de organizar o <b>Atendimento</
 O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integração. Em Execução, será exposto o processo para executar o APG, já em Banco de Dados, será possível aprender a configurar o Banco de Dados do APG, por fim e não menos importante, em Integração será explanado o processo para integrar o APG com um software que detém Painel e Chamador de Senha de Atendimento.
 </p>
 
-**Execução**
+<h3>
+  Execução
+</h3>
 
 <p align="justify">
-É importante conferir a instalação do Java 8 e Git antes de continuar. A seguir é possível visualizar um diagrama que expõe as etapas que devem ser concretizadas para executar o APG:
+Antes de iniciar a seção de Execução é significante checar a instalação do <a href="https://openjdk.java.net/projects/jdk8">Java 8</a> e <a href="https://git-scm.com/">Git</a>. Para facilitar a compreensão, foi construído o diagrama abaixo:
 </p>
 
 <br />
@@ -77,18 +79,21 @@ O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integ
 
 <br />
 
-1. Clonar
-    - Abrir o Prompt de Comando e executar `git clone https://github.com/alexmouraable/apg.git`
-2. Importar
-    - Abrir IDE e importar o APG (Poject Maven)
-3. Configurar
-    - Abrir [application.yml](./src/main/resources/application.yml) e configurar: **Conexão com Banco de Dados**, **Nome da Impressora** responsável por imprimir a Senha de Atendimento e **Nome do Estabelecimento** que aparecerá na Senha de Atendimento
-4. Executar
-    - Executar o APG e acessá-lo em `http://localhost:8080/password/print-password` 
+◽ **Clonar**: abrir o Prompt de Comando e executar `git clone https://github.com/alexmouraable/apg.git`.
 
-**Banco de Dados**
+◽ **Importar**: abrir IDE e importar o APG (Project Maven).
 
-**Integração**
+◽ **Configurar**: configurar Conexão com Banco de Dados, Nome da Impressora responsável por imprimir a Senha de Atendimento e Nome do Estabelecimento que aparecerá na Senha de Atendimento.
+
+◽ **Executar**: executar o APG e acessá-lo em `http://localhost:8080/password/print-password`
+
+<h3>
+  Banco de Dados
+</h3>
+
+<h3>
+  Integração
+</h3>
 
 
 <h2>
