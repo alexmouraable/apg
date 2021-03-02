@@ -60,7 +60,7 @@ O APG é um software Web que detém o propósito de organizar o <b>Atendimento</
 </h2>
 
 <p align="justify">
-O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integração. Em Execução, será exposto o processo para executar o APG, já em Banco de Dados, será possível aprender a configurar o Banco de Dados do APG, por fim e não menos importante, em Integração será explanado o processo para integrar o APG com um software que detém Painel e Chamador de Senha de Atendimento.
+O tópico "Instalação" detém 3 (três) seções que irão tratar respectivamente a respeito de <b>Execução do Projeto</b>, <b>Configuração do Banco de Dados</b> e <b>Integração com Software que Contém Painel e Chamador de Senha de Atendimento</b>.   
 </p>
 
 <h3>
