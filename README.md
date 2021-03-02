@@ -65,7 +65,9 @@ O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integ
 
 **Execução**
 
+<p align="justify">
 É importante conferir a instalação do Java 8 e Git antes de continuar. A seguir é possível visualizar um diagrama que expõe as etapas que devem ser concretizadas para executar o APG:
+</p>
 
 <br />
 
