@@ -84,7 +84,7 @@ O tópico de instalação contém 3 seções: Execução, Banco de Dados e Integ
 </h3>
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/38754458/109662635-082e9900-7b4a-11eb-8571-cad022acbdba.png" />
+  <img src="https://user-images.githubusercontent.com/38754458/109663135-8a1ec200-7b4a-11eb-979f-de63c6735473.png" />
 </div>
 
 <h2>
