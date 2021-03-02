@@ -11,7 +11,7 @@ import br.com.ratel.apg.infrastructure.jpa.entity.PasswordEntity;
 import br.com.ratel.apg.infrastructure.jpa.repository.PasswordRepository;
 
 @Component
-public class GeneratePasswordDataJpa implements GeneratePasswordData {
+class GeneratePasswordDataJpa implements GeneratePasswordData {
 	@Autowired
 	private PasswordRepository passwordRepository;
 

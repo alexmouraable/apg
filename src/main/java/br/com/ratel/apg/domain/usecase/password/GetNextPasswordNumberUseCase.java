@@ -15,7 +15,7 @@ import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
-public class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry {
+class GetNextPasswordNumberUseCase implements GetNextPasswordNumberEntry {
 	@Autowired
 	private Validator<GetNextPasswordNumberRequest> validator;
 

@@ -13,7 +13,7 @@ import br.com.ratel.apg.domain.validator.ValidationErrorException;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Component
-public class ObjectValidator<T> implements Validator<T> {
+class ObjectValidator<T> implements Validator<T> {
 	@Autowired
 	private javax.validation.Validator validator;
 

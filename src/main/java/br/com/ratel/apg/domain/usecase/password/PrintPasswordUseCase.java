@@ -18,7 +18,7 @@ import br.com.ratel.apg.domain.type.Report;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
-public class PrintPasswordUseCase implements PrintPasswordEntry {
+class PrintPasswordUseCase implements PrintPasswordEntry {
 	@Value("${apg.company.name}")
 	private String companyName;
 

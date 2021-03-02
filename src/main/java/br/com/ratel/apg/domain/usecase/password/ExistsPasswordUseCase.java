@@ -12,7 +12,7 @@ import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
-public class ExistsPasswordUseCase implements ExistsPasswordEntry {
+class ExistsPasswordUseCase implements ExistsPasswordEntry {
 	@Autowired
 	private ExistsPasswordData existsPasswordData;
 	

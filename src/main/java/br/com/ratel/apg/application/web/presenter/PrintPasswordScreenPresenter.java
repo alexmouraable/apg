@@ -7,7 +7,7 @@ import br.com.ratel.apg.application.web.presenter.viewmodel.PrintPasswordScreenV
 import br.com.ratel.apg.domain.constant.PasswordType;
 
 @Component
-public class PrintPasswordScreenPresenter implements PrintPasswordPresenter<PrintPasswordScreenViewModel[]> {
+class PrintPasswordScreenPresenter implements PrintPasswordPresenter<PrintPasswordScreenViewModel[]> {
 	@Override
 	public PrintPasswordScreenViewModel[] toViewModel(PasswordType[] passwordTypes) {
 		PrintPasswordScreenViewModel[] viewModel = new PrintPasswordScreenViewModel[2];

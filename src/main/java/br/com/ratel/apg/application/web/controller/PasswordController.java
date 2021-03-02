@@ -14,7 +14,7 @@ import br.com.ratel.apg.domain.entry.password.request.PrintPasswordRequest;
 
 @Controller
 @RequestMapping("password")
-public class PasswordController {
+class PasswordController {
 	@Autowired
 	private PrintPasswordPresenter<PrintPasswordScreenViewModel[]> printPasswordPresenter;
 

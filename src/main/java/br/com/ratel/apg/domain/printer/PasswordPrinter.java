@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import br.com.ratel.apg.domain.type.Report;
 
 @Component
-public class PasswordPrinter implements Printer {
+class PasswordPrinter implements Printer {
 	@Value("${apg.printers.password-printer.name}")
 	private String printerName;
 	

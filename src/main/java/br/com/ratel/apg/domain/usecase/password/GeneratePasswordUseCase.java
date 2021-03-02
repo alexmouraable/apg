@@ -20,7 +20,7 @@ import br.com.ratel.apg.domain.type.PasswordNumber;
 import br.com.ratel.apg.domain.validator.Validator;
 
 @Service
-public class GeneratePasswordUseCase implements GeneratePasswordEntry {
+class GeneratePasswordUseCase implements GeneratePasswordEntry {
 	@Autowired
 	private Validator<GeneratePasswordRequest> validator;
 

@@ -17,7 +17,7 @@ import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimplePrintServiceExporterConfiguration;
 
 @Component
-public class PrintOutJasperReports implements PrintOut {
+class PrintOutJasperReports implements PrintOut {
 	@Override
 	public void execute(Report report, String printerName) {
 		try {

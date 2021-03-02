@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import br.com.ratel.apg.domain.mapper.Mapper;
 
 @Component
-public class ObjectMapper<I, O> implements Mapper<I, O> {
+class ObjectMapper<I, O> implements Mapper<I, O> {
 	@Autowired
 	private ModelMapper modelMapper;
 	

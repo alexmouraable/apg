@@ -10,7 +10,7 @@ import br.com.ratel.apg.domain.data.password.GetGreaterPasswordNumberData;
 import br.com.ratel.apg.infrastructure.jpa.repository.PasswordRepository;
 
 @Component
-public class GetGreaterPasswordNumberDataJpa implements GetGreaterPasswordNumberData {
+class GetGreaterPasswordNumberDataJpa implements GetGreaterPasswordNumberData {
 	@Autowired
 	private PasswordRepository passwordRepository;
 

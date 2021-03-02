@@ -1,4 +1,4 @@
-package br.com.ratel.apg.domain.validator;
+package br.com.ratel.apg.infrastructure.validator;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,7 +21,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import br.com.ratel.apg.domain.constant.PasswordType;
 import br.com.ratel.apg.domain.entry.password.request.ExistsPasswordRequest;
-import br.com.ratel.apg.infrastructure.validator.ObjectValidator;
+import br.com.ratel.apg.domain.validator.ValidationErrorException;
+import br.com.ratel.apg.domain.validator.Validator;
 
 @ExtendWith(SpringExtension.class)
 public class ValidatorTests {
