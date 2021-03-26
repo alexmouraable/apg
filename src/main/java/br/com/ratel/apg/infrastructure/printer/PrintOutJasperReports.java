@@ -23,7 +23,7 @@ class PrintOutJasperReports implements PrintOut {
 		try {
 			this.tryToPrint(report, printerName);
 		} catch (Exception exception) {
-			throw new PrintOutException("The " + "\"" + report.getName() + "\"" + " report could not be printed",
+			throw new PrintOutException("The " + "\"" + report.toString() + "\"" + " report could not be printed",
 					exception);
 		}
 	}
