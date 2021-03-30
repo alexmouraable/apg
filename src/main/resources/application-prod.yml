@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: >-
+      ENC(c9El9kbBHbFdGfgMlKVkqIZVKwlvjtGdhvRLB5aLGW2rBZAdtJ0582OxMwMLZqQxA6Y40B0nAUUc1qmjbVUU5dIGIVz/p2r+WXUtXZdGcgE=)
+    password: ENC(JXeWjRyqFUdtAFmsMKuGTZ/cWPbG/vIDb4n7RSORYY2aIW8XEtzio/sOMfDiPgAQ)
+    username: ENC(WUn9sMe26Yecp4ws+afiGzh+JaQxvhCQ6XETWEaY5NEHsU1Sg8IU4+F60hL8pSMA)
+  jpa:
+    show-sql: false
+apg:
+  company:
+    name: Clismetra
+  printers:
+    password-printer:
+      name: 'Driver - Impressora Bematech MP-2800 TH'

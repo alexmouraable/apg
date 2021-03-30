@@ -19,8 +19,8 @@ jasypt:
   encryptor:
     password: '${APG_SECRET_KEY}'
 apg:
+  company:
+    name: APG
   printers:
     password-printer:
       name: EPSON L3110 Series
-  company:
-    name: Clismetra
