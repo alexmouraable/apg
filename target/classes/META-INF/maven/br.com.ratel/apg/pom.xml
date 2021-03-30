@@ -26,6 +26,9 @@
 
 		<!-- Jasper Reports Functions -->
 		<jasperreports-functions.version>6.16.0</jasperreports-functions.version>
+
+		<!-- Jasypt -->
+		<jasypt.version>3.0.3</jasypt.version>
 	</properties>
 
 	<dependencies>
@@ -92,6 +95,13 @@
 			<artifactId>jasperreports-functions</artifactId>
 			<version>${jasperreports-functions.version}</version>
 		</dependency>
+
+		<!-- Jasypt -->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
+			<version>${jasypt.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -99,6 +109,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- Jasypt -->
+			<plugin>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-maven-plugin</artifactId>
+				<version>${jasypt.version}</version>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,18 +1,23 @@
-# Data Access Configuration
 spring:
-    datasource:
-        hikari:
-            connection-test-query: SELECT 1
-    jpa:
-        hibernate:
-            naming:
-                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-        properties:
-            hibernate:
-                dialect: org.hibernate.dialect.SQLServerDialect
-        show-sql: true
-# Custom Settings
+  datasource:
+    url: >-
+      ENC(Eoo2c+TLYUEIKABNIGH728i1NVK3MZV7y9c/iiGpZ/66SEl+BZ1K2NWDL3R7v0xTVNhbjU5S8z0LrkBv1Qv2O7oAK5PvWs15fmndm2227mA=)
+    username: ENC(3lLAS+kglT9nQWrwce+lcQ5tCd2a5ifzuzqn4HkcjycfvhXXu9sw9Ja6QzmaOU4p)
+    password: ENC(RXBjW8BaeThkH++qekXy498aj+LKbF9n2X5gLmGDg4rGEWdg+V6Pzxa2CpncXFam)
+    hikari:
+      connection-test-query: SELECT 1
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+jasypt:
+  encryptor:
+    password: '${APG_SECRET_KEY}'
 apg:
   printers:
     password-printer:
