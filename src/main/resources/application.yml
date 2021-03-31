@@ -1,7 +1,8 @@
 spring:
+  profiles:
+    active: '${APG_PROFILES_ACTIVE}'
   datasource:
-    url: >-
-      ENC(Eoo2c+TLYUEIKABNIGH728i1NVK3MZV7y9c/iiGpZ/66SEl+BZ1K2NWDL3R7v0xTVNhbjU5S8z0LrkBv1Qv2O7oAK5PvWs15fmndm2227mA=)
+    url: ENC(Eoo2c+TLYUEIKABNIGH728i1NVK3MZV7y9c/iiGpZ/66SEl+BZ1K2NWDL3R7v0xTVNhbjU5S8z0LrkBv1Qv2O7oAK5PvWs15fmndm2227mA=)
     username: ENC(3lLAS+kglT9nQWrwce+lcQ5tCd2a5ifzuzqn4HkcjycfvhXXu9sw9Ja6QzmaOU4p)
     password: ENC(RXBjW8BaeThkH++qekXy498aj+LKbF9n2X5gLmGDg4rGEWdg+V6Pzxa2CpncXFam)
     hikari:
