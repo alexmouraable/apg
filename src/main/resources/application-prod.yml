@@ -1,14 +1,12 @@
 spring:
   datasource:
-    url: >-
-      ENC(akRO0+0UV8+cUcgEWnNRWIF8ej09UuOFOf3QNjH4BqzwzQLFHtGpgqyT5NGLUNjbE1TcN4DyZqXuJ1I2/rhh5BVInzZCGelvT1l+NuEuswEY0UCjLwzH+O8yX9nDDQCgNizDuXVcwRqAQqDqphpYIw==)
-    password: ENC(JXeWjRyqFUdtAFmsMKuGTZ/cWPbG/vIDb4n7RSORYY2aIW8XEtzio/sOMfDiPgAQ)
-    username: ENC(WUn9sMe26Yecp4ws+afiGzh+JaQxvhCQ6XETWEaY5NEHsU1Sg8IU4+F60hL8pSMA)
+    url: jdbc:jtds:sqlserver://001pc:1433/Clismetra
   jpa:
     show-sql: false
+jasypt:
+  encryptor:
+    password: ${APG_SECRET_KEY}
 apg:
-  company:
-    name: Clismetra
   printers:
     password-printer:
-      name: 'Driver - Impressora Bematech MP-2800 TH'
+      name: Driver - Impressora Bematech MP-2800 TH

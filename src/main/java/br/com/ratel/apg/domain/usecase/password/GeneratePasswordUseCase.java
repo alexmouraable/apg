@@ -43,8 +43,8 @@ class GeneratePasswordUseCase implements GeneratePasswordEntry {
 
 		PasswordNumber nextPasswordNumber = this.getNextPasswordNumberEntry.execute(getNextPasswordNumberRequest);
 
-		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getPasswordType(),
-				PasswordStatus.AGUARDANDO, LocalDate.now(ZoneId.of("America/Maceio")));
+		Password passwordToGenerate = new Password(null, nextPasswordNumber, generatePasswordRequest.getServiceType(),
+			generatePasswordRequest.getPasswordType(), PasswordStatus.AGUARDANDO, LocalDate.now(ZoneId.of("America/Maceio")));
 
 		Password generatedPassword = this.generatePasswordData.execute(passwordToGenerate);
 

@@ -13,6 +13,7 @@ import javax.persistence.Table;
 
 import br.com.ratel.apg.domain.constant.PasswordStatus;
 import br.com.ratel.apg.domain.constant.PasswordType;
+import br.com.ratel.apg.domain.constant.ServiceType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,6 +34,10 @@ public class PasswordEntity {
 	@Column(name = "Num_Senha")
 	private Integer number;
 	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "Tipo_Servico")
+	private ServiceType serviceType;
+
 	@Enumerated(EnumType.STRING)
 	@Column(name = "Tipo_Senha")
 	private PasswordType passwordType;

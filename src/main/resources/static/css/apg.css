@@ -56,7 +56,7 @@ body {
 }
 
 .apg-logo {
-	width: 250px;
+	width: 300px;
 }
 
 .apg-main {
@@ -84,10 +84,36 @@ body {
 	text-align: center;
 }
 
+.apg-loading {
+	align-items: center;
+	background-color: rgb(255, 255, 255, .75);
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	position: fixed;
+	z-index: 1000;
+}
+
+.apg-loading__img {
+	width: 100px;
+}
+
 .apg-font-size-20 {
 	font-size: 1.25rem;
 }
 
 .apg-font-size-24 {
 	font-size: 1.5rem;
+}
+
+.apg-display-none {
+	display: none;
+}
+
+.apg-width-100 {
+	width: 100%;
+}
+
+.apg-visibility-hidden {
+	visibility: hidden;
 }
