@@ -22,10 +22,10 @@
 		<modelmapper.version>2.3.0</modelmapper.version>
 
 		<!-- Jasper Reports -->
-		<jasperreports.version>6.16.0</jasperreports.version>
+		<jasperreports.version>6.21.3</jasperreports.version>
 
 		<!-- Jasper Reports Functions -->
-		<jasperreports-functions.version>6.16.0</jasperreports-functions.version>
+		<jasperreports-functions.version>6.21.3</jasperreports-functions.version>
 
 		<!-- Jasypt -->
 		<jasypt.version>3.0.3</jasypt.version>
