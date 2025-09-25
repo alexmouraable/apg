@@ -29,5 +29,6 @@ public class PrintPasswordScreenViewModel {
 	public static class Button {
 		private String description;
 		private String inputValue;
+		private String type;
 	}
 }

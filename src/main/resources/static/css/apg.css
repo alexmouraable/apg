@@ -43,7 +43,11 @@ body {
 	opacity: 0.5;
 }
 
-.apg-button--primary, .apg-button--secondary {
+.apg-button--primary,
+.apg-button--secondary,
+.apg-button--warning,
+.apg-button--danger,
+.apg-button--success {
 	color: #FFF;
 }
 
@@ -52,6 +56,18 @@ body {
 }
 
 .apg-button--secondary {
+	background-color: #6E6E6E;
+}
+
+.apg-button--warning {
+	background-color: #F5A623;
+}
+
+.apg-button--danger {
+	background-color: #D72638;
+}
+
+.apg-button--success {
 	background-color: #95C839;
 }
 
