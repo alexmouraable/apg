@@ -35,7 +35,7 @@ body {
 	border-radius: 4px;
 	cursor: pointer;
 	font-family: "Montserrat";
-	padding: 20px 40px;
+	padding: 40px 20px;
 }
 
 .apg-button:disabled {
@@ -114,12 +114,12 @@ body {
 	width: 100px;
 }
 
-.apg-font-size-20 {
-	font-size: 1.25rem;
-}
-
 .apg-font-size-24 {
 	font-size: 1.5rem;
+}
+
+.apg-font-size-28 {
+	font-size: 1.75rem;
 }
 
 .apg-display-none {
@@ -132,4 +132,8 @@ body {
 
 .apg-visibility-hidden {
 	visibility: hidden;
+}
+
+.apg-text-align-center {
+	text-align: center;
 }

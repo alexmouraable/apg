@@ -13,7 +13,7 @@ import br.com.ratel.apg.domain.constant.ServiceType;
 @Component
 class PrintPasswordScreenPresenter implements PrintPasswordPresenter<PrintPasswordScreenViewModel> {
 	private List<String> serviceTypeButtonTypes = Arrays.asList("primary", "success");
-	private List<String> passwordTypeButtonTypes = Arrays.asList("primary", "warning");
+	private List<String> passwordTypeButtonTypes = Arrays.asList("warning", "danger");
 
 	@Override
 	public PrintPasswordScreenViewModel toViewModel(ServiceType[] serviceTypes,
