@@ -1,6 +1,6 @@
 package br.com.ratel.apg.infrastructure.jpa.entity;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -47,5 +47,5 @@ public class PasswordEntity {
 	private PasswordStatus passwordStatus;
 	
 	@Column(name = "Data_Senha")
-	private LocalDate generationDate;
+	private LocalDateTime generationDateTime;
 }

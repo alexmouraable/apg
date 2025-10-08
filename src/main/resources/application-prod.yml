@@ -3,9 +3,6 @@ spring:
     url: jdbc:jtds:sqlserver://001pc:1433/Clismetra
   jpa:
     show-sql: false
-jasypt:
-  encryptor:
-    password: ${APG_SECRET_KEY}
 apg:
   printers:
     password-printer:

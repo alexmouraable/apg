@@ -1,9 +1,7 @@
 package br.com.ratel.apg.domain.data.password;
 
-import java.time.LocalDate;
-
-import br.com.ratel.apg.domain.constant.PasswordType;
+import br.com.ratel.apg.domain.data.password.request.GetGreaterPasswordNumberDataRequest;
 
 public interface GetGreaterPasswordNumberData {
-	public Integer execute(PasswordType passwordType, LocalDate generationDate);
+	public Integer execute(GetGreaterPasswordNumberDataRequest request);
 }

@@ -1,9 +1,7 @@
 package br.com.ratel.apg.domain.data.password;
 
-import java.time.LocalDate;
-
-import br.com.ratel.apg.domain.constant.PasswordType;
+import br.com.ratel.apg.domain.data.password.request.ExistsPasswordDataRequest;
 
 public interface ExistsPasswordData {
-	public boolean execute(PasswordType passwordType, LocalDate generationDate);
+	public boolean execute(ExistsPasswordDataRequest request);
 }
